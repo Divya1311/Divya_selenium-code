@@ -1,0 +1,73 @@
+Feature: Practice
+
+Scenario: To open the Book menu when user hits the book menu
+Given defines Precondition
+Given open the kpn webpage 
+When defines the user action
+When User click the book menu
+Then user should see the ticket booking page.
+
+Scenario: To test the UI
+Given: To check as per the spec all the fields in the ticket booking page is displayed or not
+
+Scenario: To verify the tab functionality is working or not
+Given: user in booking screen
+When: user in first field press tab key
+And: check system move to the next next fields or not.
+
+Scenario: To check user can able to select the source and destinaton
+Given: user in ticket booking page
+When: user clicks the dropdown, need to display the list of cities
+Then: From source list user can able to select the city
+When: user click the destination dropdown need to display the list of cities
+Then: user can able to select the Destination
+
+
+Scenario: Before selecting the source user should be able to select Destination
+Given: when user in ticket booking screen
+When : user try to select the destination without selecting the source 
+Then: system should not display the destination values in dropdown list
+
+Scenario: To verify user can able to selct the start date return date and should not able to select the outdated dates (past dates)
+Given: When user in booking page
+When: user clicks the calendar system should display the calendar and outdated dates need to be in disable state.
+And: user can able to select the present and future dates.
+
+Scenario: User can able to submit the booking and store the details in database.
+Given: user in booking screen
+When: once user as entered the booking details
+Then: click on Plan trip button
+And: system navigates the user to the select bus screen
+
+Scenario: If no bus available to the selected destination, should display the popup message
+Given: user in booking screen
+When: once user enter and submit the booking details
+Then: If no buses available need to display the popup message
+And: system need to display thatkal online screen
+
+Scenario: user can able to select the seat
+Given : user in select in select a seat page
+When: user click on select seat button System need to display the select seat page
+Then: user should be able to select the seat 
+And: system should display the Payment details in right side of the screen
+
+Scenario: If no seats available should display the message
+Given: when user in  booking screen
+When: If no seats available, once user submit the booking details
+Then: system should display the message.
+
+Scenario: If user continues without selecting the seat need to display the error message
+Given: when user in select bus screen
+When: user try to continue without selecting the bus
+Then: System need to display the error message.
+
+
+
+
+
+
+
+
+
+
+

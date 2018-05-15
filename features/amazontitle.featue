@@ -1,0 +1,6 @@
+Feature: To verify page title 
+
+Scenario:To verify title
+Given when i am in home page
+When i verify the page title 
+Then display the result
